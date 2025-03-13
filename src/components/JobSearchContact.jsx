@@ -18,18 +18,18 @@ export default function JobSearchContact() {
     <motion.section
       ref={ref}
       id="job-search"
-      className="h-screen flex flex-col items-center justify-center px-6 text-center z-10"
+      className="h-screen flex flex-col items-center justify-center px-6 text-center z-10 dark:text-white text-textlight"
       style={{ opacity: smoothOpacity, y: smoothY }}
     >
       {/* Job Search Section */}
-      <div className="mb-12">
+      <div className="mb-12 dark:text-white text-textlight">
         <h2 className="text-4xl md:text-5xl font-bold text-title mb-4">What am I Looking For?</h2>
         <p className="text-lg md:text-xl opacity-80">
           I'm currently looking for roles in **Product Management**, **Full-Stack Development**, and **DevOps**.
         </p>
         <a
-          href="/resume.pdf" // Update with your actual resume link
-          className="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold text-lg rounded-lg shadow-md transition hover:scale-105 hover:shadow-lg"
+          href="https://github.com/sapirtalk/portfolio-project/blob/ade45fd854ba5ab378bfb118d8e259ca75600adc/public/Sapir%20Talker%20CV.pdf"
+          className="mt-4 inline-block px-6 py-3 dark:bg-primary bg-primarylight text-white font-semibold text-lg rounded-lg shadow-md transition hover:scale-105 hover:shadow-lg"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -39,13 +39,13 @@ export default function JobSearchContact() {
 
       {/* Contact Section */}
       <motion.div
-        className="bg-white/30 dark:bg-gray-800/30 backdrop-blur-lg p-6 rounded-lg shadow-lg flex flex-col gap-4"
+        className="bg-white/5 dark:bg-gray-800/30 backdrop-blur-lg p-6 rounded-lg shadow-lg flex flex-col gap-4"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: false }}
       >
-        <h3 className="text-2xl font-semibold text-primary">Get In Touch</h3>
+        <h3 className="text-2xl font-semibold dark:text-primary text-primarylight">Get In Touch</h3>
         <a
           href="mailto:sapirtalk@gmail.com"
           className="text-lg font-medium text-title hover:underline"

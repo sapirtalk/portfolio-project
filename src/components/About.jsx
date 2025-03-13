@@ -23,10 +23,10 @@ export default function About() {
       className="h-screen flex flex-col items-center justify-center text-center px-6"
       style={{ opacity: smoothOpacity, y: smoothY }}
     >
-      <div className="max-w-2xl">
+      <div className="max-w-2xl dark:text-white text-textlight z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-title mb-4">About Me</h2>
         <p className="text-lg md:text-xl opacity-80 leading-relaxed">
-          Hi! I'm <span className="text-primary font-semibold">Sapir Talker</span>, an aspiring **Product Manager** and **Full-Stack Developer**.
+          Hi! I'm <span className="dark:text-primary text-primarylight font-semibold">Sapir Talker</span>, an aspiring **Product Manager** and **Full-Stack Developer**.
           I specialize in creating **efficient, scalable web applications** and have a passion for **problem-solving, UX, and innovation**.
         </p>
       </div>

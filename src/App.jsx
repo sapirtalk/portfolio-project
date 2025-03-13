@@ -4,10 +4,11 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import JobSearchContact from "./components/JobSearchContact";
+import Projects from "./components/Projects";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-background text-text">
+    <div className="min-h-screen dark:bg-background bg-backgroundlight  text-text">
       {/* Navbar */}
       <Navbar />
 
@@ -15,11 +16,7 @@ export default function App() {
       <main className="flex flex-col items-center">
         <Hero />
         <About />
-
-        <section id="projects" className="h-screen flex items-center justify-center">
-          <h2 className="text-3xl font-semibold">Projects</h2>
-        </section>
-
+        <Projects />
         <Skills />
         <JobSearchContact />
 

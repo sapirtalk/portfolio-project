@@ -84,13 +84,13 @@ export default function Hero() {
       </div>
 
       {/* Hero Content */}
-      <div className="z-10 relative h-screen flex flex-col items-center justify-center ">
+      <div className="z-10 relative h-screen dark:text-text text-textlight flex flex-col items-center justify-center ">
       <h1 className="text-5xl md:text-6xl font-bold">Hi, I'm Sapir Talker</h1>
       <p className="mt-4 text-lg md:text-xl opacity-80">Aspiring Product Manager & Full-Stack Developer</p>
 
       <a
         href="#projects"
-        className="mt-6 px-6 py-3 bg-primary text-white font-semibold text-lg rounded-lg shadow-md transition hover:scale-105 hover:shadow-lg"
+        className="mt-6 px-6 py-3 dark:bg-primary bg-primarylight text-white  font-semibold text-lg rounded-lg shadow-md transition hover:scale-105 hover:shadow-lg"
       >
         View My Work
       </a>

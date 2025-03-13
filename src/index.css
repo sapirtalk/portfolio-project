@@ -17,15 +17,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --color-background: #0D1117;
-  --color-text: #C9D1D9;
+  --color-text: #ffffff;
   --color-primary: #58A6FF;
   --color-accent: #F9826C;
+
+  --color-backgroundlight: #EFF0F9;
+  --color-textlight: #051319;
+  --color-primarylight: #2D3A6E;
+  --color-accentlight: #C0302D;
+
 }
-
-
 
 /* 
 a {
