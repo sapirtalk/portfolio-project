@@ -18,7 +18,7 @@ export default function JobSearchContact() {
     <motion.section
       ref={ref}
       id="job-search"
-      className="h-screen flex flex-col items-center justify-center px-6 text-center z-10 dark:text-white text-textlight"
+      className="h-screen flex flex-col items-center justify-center px-6 text-center z-10 dark:text-white text-textlight "
       style={{ opacity: smoothOpacity, y: smoothY }}
     >
       {/* Job Search Section */}

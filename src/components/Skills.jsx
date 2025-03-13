@@ -38,7 +38,7 @@ export default function Skills() {
     <motion.section
       ref={ref}
       id="skills"
-      className="h-screen flex flex-col items-center justify-center px-6 text-center"
+      className="h-screen flex flex-col items-center justify-center px-6 text-center z-10"
       style={{ opacity: smoothOpacity, y: smoothY }}
     >
       <h2 className="text-4xl md:text-5xl font-bold text-title mb-8 dark:text-white text-textlight">My Skills</h2>

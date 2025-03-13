@@ -30,10 +30,35 @@ export default function Navbar() {
     }
   };
 
+  // Improved Section Highlighting with IntersectionObserver
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let visibleSection = entries.find((entry) => entry.isIntersecting);
+        console.log(visibleSection);
+        if (visibleSection) {
+          setActiveSection(visibleSection.target.id);
+        }
+      },
+      {
+        root: null,
+        rootMargin: "-30% 0px -50% 0px", // Adjusted for earlier detection
+        threshold: 0.3, // Highlights when 30% of the section is visible
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <nav className="fixed top-0 left-0 w-full dark:text-text text-textlight p-4 bg-opacity-50 backdrop-blur-md flex items-center justify-between z-50 bg-white/50 dark:bg-black/50">
       {/* Logo */}
-      <h1 className="text-xl font-bold">My Portfolio</h1>
+      <div className="flex items-center space-x-2">
+        <img src="/logo.jpg" alt="Logo" className="w-10 h-10 rounded-full" />
+        <h1 className="text-xl font-bold">Sapir Talker</h1>
+      </div>
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex space-x-4">
@@ -57,7 +82,7 @@ export default function Navbar() {
       <div className="flex items-center space-x-4">
         <button
           onClick={toggleTheme}
-          className="p-2 bg-gray-200 dark:bg-gray-800 rounded transition"
+          className="p-2 bg-gray-500 dark:bg-gray-500 rounded-full transition dark:hover:bg-gray-700 hover:bg-gray-700 cursor-pointer"
         >
           {theme === "light" ? "🌙" : "☀️"}
         </button>
