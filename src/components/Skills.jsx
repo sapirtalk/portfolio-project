@@ -5,19 +5,19 @@ import { useRef } from "react";
 const skills = [
   {
     category: "Frontend",
-    items: ["React.js", "Next.js", "Tailwind CSS", "JavaScript", "Vite"],
+    items: ["React.js", "Next.js", "Tailwind CSS", "Framer Motion", "HTML", "CSS"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express.js", "MongoDB", "SQL"],
+    items: ["Node.js", "Express.js", "MongoDB", "SQL" , "REST API" , "Next.js API Routes"],
   },
   {
     category: "DevOps & Tools",
-    items: ["Git", "Docker", "Linux", "CI/CD", "Vercel"],
+    items: ["Git", "Docker", "Kubernates" , "Postman" , "Jira" , "Jenkins"],
   },
   {
-    category: "AI & Autonomy",
-    items: ["Heuristic Search", "Planning Algorithms", "AI Systems"],
+    category: "AI & Data",
+    items: ["Python" , "Tableau" , "Excel" , "Data Structurs", "Algorithms" , "Classical Statistical Methods" , "Modern & Applied Statistics" ],
   },
 ];
 

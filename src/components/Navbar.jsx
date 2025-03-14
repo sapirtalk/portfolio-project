@@ -32,24 +32,30 @@ export default function Navbar() {
 
   // Improved Section Highlighting with IntersectionObserver
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        let visibleSection = entries.find((entry) => entry.isIntersecting);
-        console.log(visibleSection);
-        if (visibleSection) {
-          setActiveSection(visibleSection.target.id);
-        }
-      },
-      {
-        root: null,
-        rootMargin: "-30% 0px -50% 0px", // Adjusted for earlier detection
-        threshold: 0.3, // Highlights when 30% of the section is visible
-      }
-    );
+    setTimeout(() => {
+      const sections = document.querySelectorAll("section");
+      if (!sections.length) return;
 
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+      const observer = new IntersectionObserver(
+        (entries) => {
+          let visibleEntry = entries.find((entry) => entry.isIntersecting);
+          console.log("Visible Section:", visibleEntry?.target?.id || "None");
+
+          if (visibleEntry?.target?.id) {
+            setActiveSection(visibleEntry.target.id);
+          }
+        },
+        {
+          root: null,
+          rootMargin: "-10% 0px -60% 0px", // Ensures earlier detection
+          threshold: 0.25, // Trigger when 25% of section is in viewport
+        }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+
+      return () => observer.disconnect();
+    }, 500); // Small delay to ensure elements are loaded
   }, []);
 
   return (

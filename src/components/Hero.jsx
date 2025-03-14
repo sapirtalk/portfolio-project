@@ -20,19 +20,19 @@ export default function Hero() {
 
 
   useEffect(() => {
-    console.log("Initializing tsParticles..."); // Debugging log
+    // console.log("Initializing tsParticles..."); // Debugging log
   
     initParticlesEngine(async (engine) => {
-      console.log("tsParticles Engine Loaded", engine); // Debugging log
+      // console.log("tsParticles Engine Loaded", engine); // Debugging log
       await loadSlim(engine);
     }).then(() => {
-      console.log("tsParticles Successfully Initialized!");
+      // console.log("tsParticles Successfully Initialized!");
       setInit(true);
     });
   }, []);
 
   const particlesLoaded = (container) => {
-    console.log(container);
+    // console.log(container);
   };
   
 
@@ -41,7 +41,7 @@ export default function Hero() {
     () => ({
       background: { color: "transparent" },
       particles: {
-        number: { value: isMobile ? 100 : 250 }, // Fewer particles on mobile
+        number: { value: isMobile ? 100 : 300 }, // Fewer particles on mobile
         color: { value: "#58A6FF" }, // Neon blue color
         shape: { type: "circle" },
         opacity: { value: 0.8, random: false }, // More visible
@@ -85,14 +85,14 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="z-10 relative h-screen dark:text-text text-textlight flex flex-col items-center justify-center ">
-      <h1 className="text-5xl md:text-6xl font-bold">Hi, I'm Sapir Talker</h1>
-      <p className="mt-4 text-lg md:text-xl opacity-80">Aspiring Product Manager & Full-Stack Developer</p>
+      <h1 className="text-5xl md:text-6xl font-bold">Sapir Talker</h1>
+      <p className="mt-4 text-lg md:text-xl opacity-80">"Do what you love, and you’ll never work a day in your life." — Confucius</p>
 
       <a
         href="#projects"
         className="mt-6 px-6 py-3 dark:bg-primary bg-primarylight text-white  font-semibold text-lg rounded-lg shadow-md transition hover:scale-105 hover:shadow-lg"
       >
-        View My Work
+        Explore My Work
       </a>
       </div>
     </section>
