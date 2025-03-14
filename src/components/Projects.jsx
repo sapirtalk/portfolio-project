@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Snowfall Simulation",
     github: "https://github.com/your-repo/snowfall-simulation",
-    video: "/demos/snowfall.mp4",
+    video: "/portfolio-project/demos/snowfall.mp4",
     description:
       "An interactive snowfall simulation using Python and Pygame. Features dynamic snow accumulation, and an efficient data structure implementation to manage snowfall behavior.",
     tech: ["Python", "Pygame", "Data Structures & Algorithms"],
