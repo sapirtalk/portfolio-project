@@ -62,7 +62,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full dark:text-text text-textlight p-4 bg-opacity-50 backdrop-blur-md flex items-center justify-between z-50 bg-white/50 dark:bg-black/50">
       {/* Logo */}
       <div className="flex items-center space-x-2">
-        <img src="/logo.jpg" alt="Logo" className="w-10 h-10 rounded-full" />
+        <img src="/portfolio-project/logo.jpg" alt="Logo" className="w-10 h-10 rounded-full" />
         <h1 className="text-xl font-bold">Sapir Talker</h1>
       </div>
 

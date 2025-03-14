@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Nature Explorer",
     github: "https://github.com/your-repo/nature-explorer",
-    video: "/demos/ntrexplorer.mp4",
+    video: "/portfolio-project/demos/ntrexplorer.mp4",
     description:
       "A web platform designed to enhance trail and tour management by providing an interactive map, user-generated content, and an Admin Panel for streamlined content moderation and user management.",
     tech: ["Next.js", "MongoDB", "Leaflet.js", "Tailwind CSS", "REST API"],
@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Maze Solver AI",
     github: "https://github.com/your-repo/maze-solver",
-    video: "/demos/mazesolver.mp4",
+    video: "/portfolio-project/demos/mazesolver.mp4",
     description:
       "An AI-powered maze generator and solver implementing heuristic search strategies and memory-efficient algorithms. It provides visualized pathfinding solutions and supports custom maze configurations.",
     tech: ["Python", "Tkinter", "Heuristic Search", "Data Structures & Algorithms"],
