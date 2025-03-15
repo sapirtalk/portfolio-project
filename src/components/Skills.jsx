@@ -11,10 +11,10 @@ const skills = [
     category: "Backend",
     items: ["Node.js", "Express.js", "MongoDB", "SQL" , "REST API" , "Next.js API Routes"],
   },
-  {
-    category: "DevOps & Tools",
-    items: ["Git", "Docker", "Kubernates" , "Postman" , "Jira" , "Jenkins"],
-  },
+  // {
+  //   category: "DevOps & Tools",
+  //   items: ["Git", "Docker", "Kubernates" , "Postman" , "Jira" , "Jenkins"],
+  // },
   {
     category: "AI & Data",
     items: ["Python" , "Tableau" , "Excel" , "Data Structurs", "Algorithms" , "Classical Statistical Methods" , "Modern & Applied Statistics" ],
