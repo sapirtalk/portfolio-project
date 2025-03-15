@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 const projects = [
   {
     title: "Nature Explorer",
-    github: "https://github.com/your-repo/nature-explorer",
+    github: "https://github.com/sapirtalk/nature-explorer-website",
     video: "/portfolio-project/demos/ntrexplorer.mp4",
     description:
       "A web platform designed to enhance trail and tour management by providing an interactive map, user-generated content, and an Admin Panel for streamlined content moderation and user management.",
@@ -13,7 +13,7 @@ const projects = [
   },
   {
     title: "Maze Solver AI",
-    github: "https://github.com/your-repo/maze-solver",
+    github: "https://github.com/sapirtalk/AI_maze_solver",
     video: "/portfolio-project/demos/mazesolver.mp4",
     description:
       "An AI-powered maze generator and solver implementing heuristic search strategies and memory-efficient algorithms. It provides visualized pathfinding solutions and supports custom maze configurations.",
@@ -21,7 +21,7 @@ const projects = [
   },
   {
     title: "Snowfall Simulation",
-    github: "https://github.com/your-repo/snowfall-simulation",
+    github: "https://github.com/sapirtalk/SnowFall-Sim",
     video: "/portfolio-project/demos/snowfall.mp4",
     description:
       "An interactive snowfall simulation using Python and Pygame. Features dynamic snow accumulation, and an efficient data structure implementation to manage snowfall behavior.",
