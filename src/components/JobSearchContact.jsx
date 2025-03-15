@@ -28,10 +28,11 @@ export default function JobSearchContact() {
           I'm currently looking for roles in <span className="font-semibold dark:text-primary text-primarylight">Data Analysis</span> , <span className="font-semibold dark:text-primary text-primarylight">Full-Stack Development</span>, and <span className="font-semibold dark:text-primary text-primarylight">DevOps</span>.
         </p>
         <a
-          href="https://github.com/sapirtalk/portfolio-project/blob/ade45fd854ba5ab378bfb118d8e259ca75600adc/public/Sapir%20Talker%20CV.pdf"
-          className="mt-4 inline-block px-6 py-3 dark:bg-primary bg-primarylight text-white font-semibold text-lg rounded-lg shadow-md transition hover:scale-105 hover:shadow-lg"
-          target="_blank"
+          href="/portfolio-project/Sapir_Talker_CV.pdf"
+          target="_blank" // Opens in a new tab
           rel="noopener noreferrer"
+          // download="Sapir_Talker_Resume.pdf" // Forces download instead of opening in a URL
+          className="mt-4 inline-block px-6 py-3 dark:bg-primary bg-primarylight text-white font-semibold text-lg rounded-lg shadow-md transition hover:scale-105 hover:shadow-lg"
         >
           View My Resume
         </a>
