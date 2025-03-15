@@ -25,7 +25,7 @@ export default function JobSearchContact() {
       <div className="mb-12 dark:text-white text-textlight">
         <h2 className="text-4xl md:text-5xl font-bold text-title mb-4">What am I Looking For?</h2>
         <p className="text-lg md:text-xl opacity-80">
-          I'm currently looking for roles in **Product Management**, **Full-Stack Development**, and **DevOps**.
+          I'm currently looking for roles in <span className="font-semibold dark:text-primary text-primarylight">Data Analysis</span> , <span className="font-semibold dark:text-primary text-primarylight">Full-Stack Development</span>, and <span className="font-semibold dark:text-primary text-primarylight">DevOps</span>.
         </p>
         <a
           href="https://github.com/sapirtalk/portfolio-project/blob/ade45fd854ba5ab378bfb118d8e259ca75600adc/public/Sapir%20Talker%20CV.pdf"
