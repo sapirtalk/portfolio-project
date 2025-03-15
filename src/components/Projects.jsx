@@ -27,6 +27,14 @@ const projects = [
       "An interactive snowfall simulation using Python and Pygame. Features dynamic snow accumulation, and an efficient data structure implementation to manage snowfall behavior.",
     tech: ["Python", "Pygame", "Data Structures & Algorithms"],
   },
+  {
+    title: "Portfolio Webpage",
+    github: "https://github.com/sapirtalk/portfolio-project",
+    video: "/portfolio-project/demos/portfolio.mp4",
+    description:
+      "A responsive portfolio webpage built with React and Vite, showcasing my projects and skills. Including Particles.js for a dynamic background and Framer Motion for smooth animations.",
+    tech: ["React.js", "Vite", "Tailwind CSS", "Framer Motion", "Particles.js"],
+  },
 ];
 
 export default function Projects() {
