@@ -6,10 +6,12 @@ import Skills from "./components/Skills";
 import JobSearchContact from "./components/JobSearchContact";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 export default function App() {
   return (
     <div className="min-h-screen dark:bg-background bg-backgroundlight  text-text">
+      <GoogleAnalytics />
       {/* Navbar */}
       <Navbar />
 
