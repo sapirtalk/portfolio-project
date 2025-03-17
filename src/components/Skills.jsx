@@ -1,23 +1,60 @@
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
+import { FaReact, FaNodeJs,  FaPython, FaHtml5, FaCss3Alt,  FaChartBar } from "react-icons/fa";
+import { SiNextdotjs, SiTailwindcss, SiFramer, SiExpress, SiMongodb,  SiTableau, SiJupyter } from "react-icons/si";
+import { MdPeople, MdLightbulb, MdSyncAlt, MdPublic, MdManageAccounts } from "react-icons/md";
+import { PiGraphLight } from "react-icons/pi";
+import { GiArtificialIntelligence } from "react-icons/gi";
+import { TbApi , TbSql  } from "react-icons/tb";
+import { LuChartSpline } from "react-icons/lu";
+import { LiaBrainSolid } from "react-icons/lia";
 
-// Skill categories and items
+// Skill categories and items with corresponding icons
 const skills = [
   {
     category: "Frontend",
-    items: ["React.js", "Next.js", "Tailwind CSS", "Framer Motion", "HTML", "CSS"],
+    items: [
+      { name: "React.js", icon: <FaReact /> },
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+      { name: "Framer Motion", icon: <SiFramer /> },
+      { name: "HTML", icon: <FaHtml5 /> },
+      { name: "CSS", icon: <FaCss3Alt /> },
+    ],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express.js", "MongoDB", "SQL" , "REST API" , "Next.js API Routes"],
+    items: [
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "Express.js", icon: <SiExpress /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "SQL", icon: <TbSql /> },
+      { name: "REST API", icon: <TbApi /> },
+      { name: "Next.js API Routes", icon: <SiNextdotjs /> },
+    ],
   },
-  // {
-  //   category: "DevOps & Tools",
-  //   items: ["Git", "Docker", "Kubernates" , "Postman" , "Jira" , "Jenkins"],
-  // },
   {
     category: "AI & Data",
-    items: ["Python" , "Tableau" , "Excel" , "Data Structurs", "Algorithms" , "Classical Statistical Methods" , "Modern & Applied Statistics" ],
+    items: [
+      { name: "Python", icon: <FaPython /> },
+      { name: "Tableau", icon: <SiTableau /> },
+      { name: "Excel", icon: <FaChartBar /> },
+      { name: "Data Structures", icon: <PiGraphLight /> },
+      { name: "Algorithms", icon: <GiArtificialIntelligence /> },
+      { name: "Classical Statistical Methods", icon: <LuChartSpline /> },
+      { name: "Modern & Applied Statistics", icon: <SiJupyter /> },
+    ],
+  },
+  {
+    category: "Soft Skills",
+    items: [
+      { name: "Teamwork", icon: <MdPeople /> },
+      { name: "Problem Solving", icon: <MdLightbulb /> },
+      { name: "Adaptability", icon: <MdSyncAlt /> },
+      { name: "Communication", icon: <MdPublic /> },
+      { name: "Leadership", icon: <MdManageAccounts /> },
+      { name: "Creativity", icon: <LiaBrainSolid /> },
+    ],
   },
 ];
 
@@ -25,7 +62,7 @@ export default function Skills() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["-30% center", "30% center"], // Adjust fade-in and fade-out timing
+    offset: ["-30% center", "30% center"],
   });
 
   const opacity = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
@@ -52,16 +89,16 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            viewport={{ once: false }} // Ensures animation happens every time
+            viewport={{ once: false }}
           >
             <h3 className="text-2xl font-semibold dark:text-primary text-primarylight mb-3">{skill.category}</h3>
-            <ul className="flex flex-wrap justify-center gap-2">
+            <ul className="flex flex-wrap justify-center gap-3">
               {skill.items.map((item, i) => (
                 <li
                   key={i}
-                  className="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium hover:scale-105 dark:hover:bg-accent hover:bg-accentlight  transition duration-300 ease-in-out cursor-pointer"
+                  className="flex items-center space-x-2 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium hover:scale-105 dark:hover:bg-accent hover:bg-accentlight transition duration-300 ease-in-out cursor-pointer"
                 >
-                  {item}
+                  {item.icon} <span>{item.name}</span>
                 </li>
               ))}
             </ul>
