@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { FaGithub } from "react-icons/fa6";
 
 // Project Data
 const projects = [
@@ -44,12 +45,11 @@ export default function Projects() {
   // Scroll-based animation
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["-50% center", "50% center"], // Adjusted to work in both directions
+    offset: ["-50% center", "50% center"],
   });
 
   const opacity = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
-  const y = useTransform(scrollYProgress, [0, 1], [60, 0]); // Adds vertical movement
-
+  const y = useTransform(scrollYProgress, [0, 1], [60, 0]);
   const smoothOpacity = useSpring(opacity, { stiffness: 100, damping: 20 });
   const smoothY = useSpring(y, { stiffness: 100, damping: 20 });
 
@@ -66,19 +66,29 @@ export default function Projects() {
         {/* Left: Project List */}
         <div className="w-1/3 flex flex-col space-y-4 pr-4">
           {projects.map((project, index) => (
-            <motion.button
-              key={index}
-              onMouseEnter={() => setActiveProject(project)}
-              className={`p-2 text-left text-lg font-semibold transition-all ${
-                activeProject.title === project.title
-                  ? "dark:text-primary text-primarylight scale-105"
-                  : "dark:hover:text-primary hover:text-primarylight"
-              }`}
-            >
-              <a href={project.github} target="_blank" rel="noopener noreferrer">
+            <motion.div key={index} className="flex flex-col">
+              <motion.button
+                onClick={() => setActiveProject(project)}
+                className={`p-2 text-left text-lg font-semibold transition-all ${
+      activeProject.title === project.title
+        ? "dark:text-primary text-primarylight scale-105 underline cursor-default"
+        : "dark:hover:text-primary hover:text-primary cursor-pointer"
+                }`}
+              >
                 {project.title}
-              </a>
-            </motion.button>
+              </motion.button>
+              {activeProject.title === project.title && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 text-sm dark:text-white flex flex-row items-center text-primarylight px-3 py-1 rounded-md transition hover:scale-105 hover:underline"
+                >
+                  View on GitHub
+                  <FaGithub size={20} />
+                </a>
+              )}
+            </motion.div>
           ))}
         </div>
 
@@ -95,7 +105,7 @@ export default function Projects() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           />
-          <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 text-center max-w-lg">
+          <p className="mt-4 text-lg text-gray-700 text-justify dark:text-gray-300 max-w-lg">
             {activeProject.description}
           </p>
           {/* Tech Badges */}

@@ -45,10 +45,10 @@ export default function Hero() {
         color: { value: "#58A6FF" }, // Neon blue color
         shape: { type: "circle" },
         opacity: { value: 0.8, random: false }, // More visible
-        size: { value: 2, random: true }, // Larger size
+        size: { value: 3, random: true }, // Larger size
         move: {
           enable: true,
-          speed: 1, // Faster movement
+          speed: 0.8, // Faster movement
           direction: "none",
           random: true,
           straight: false,
@@ -67,7 +67,7 @@ export default function Hero() {
           onClick: { enable: true, mode: "push" },
         },
         modes: {
-          repulse: { distance: 100 , duration: 1 },
+          repulse: { distance: 50 , duration: 1 },
           push: { quantity: 1 },
         },
       },

@@ -25,10 +25,12 @@ export default function About() {
     >
       <div className="max-w-2xl dark:text-white text-textlight z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-title mb-4">About Me</h2>
-        <p className="text-lg md:text-xl opacity-80 leading-relaxed">
-          Hi! I'm <span className="dark:text-primary text-primarylight font-semibold">Sapir Talker</span>, As an Information Systems Engineering graduate, I love building things—whether it’s scalable web applications, automating workflows, or uncovering insights from data.<br></br> With a mix of Problem-Solving, Full-Stack Development, and Data Analysis, I love turning ideas into reality.<br></br>
-
-I tinker with Python, JavaScript (React, Next.js, Node.js), SQL, and MongoDB, always finding new ways to make things smoother, faster, and smarter. There's nothing more exciting than solving a problem with the right mix of code, creativity, and curiosity!
+        <p className="text-lg md:text-xl opacity-80 leading-relaxed text-justify">
+            Hi! I'm <span className="dark:text-primary text-primarylight font-semibold">Sapir Talker</span>, As an Information Systems Engineering graduate, I love building things—whether it’s scalable web applications, automating workflows, or uncovering insights from data.
+            
+            With a mix of Problem-Solving, Full-Stack Development, and Data Analysis, I love turning ideas into reality.
+            <br /><br />
+            I tinker with Python, JavaScript (React, Next.js, Node.js), SQL, and MongoDB, always finding new ways to make things smoother, faster, and smarter. There's nothing more exciting than solving a problem with the right mix of code, creativity, and curiosity!
         </p>
       </div>
     </motion.section>

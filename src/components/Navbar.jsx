@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { MdLightMode , MdDarkMode } from "react-icons/md";
+
 
 export default function Navbar() {
   const [theme, setTheme] = useState("light");
@@ -91,11 +93,11 @@ export default function Navbar() {
           onClick={toggleTheme}
           className="p-2 bg-gray-500 dark:bg-gray-500 rounded-full transition dark:hover:bg-gray-700 hover:bg-gray-700 cursor-pointer"
         >
-          {theme === "light" ? "🌙" : "☀️"}
+          {theme === "light" ? <MdDarkMode /> : <MdLightMode/>}
         </button>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden p-2" onClick={() => setMenuOpen(!menuOpen)}>
+        <button className="md:hidden p-2 text-2xl" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? "✖️" : "☰"}
         </button>
       </div>
